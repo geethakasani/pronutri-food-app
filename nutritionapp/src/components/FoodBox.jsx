@@ -8,7 +8,7 @@ function FoodBox(props) {
 
   const handleQuantityChange = (e) => {
     const newQuantity = parseInt(e.target.value, 10);
-    setQuantity(newQuantity);
+    setQuantity(newQuantity >= 0 ? newQuantity :"");
     
   };
 
@@ -25,41 +25,41 @@ function FoodBox(props) {
 
   return (
     <div className="box">
-      <article className="media">
-        <div className="media-left">
+      <div className="media-left">
           <figure className="image is-64x64">
             <img src={props.food.img} alt={props.food.name} width="40" height="40" />
           </figure>
         </div>
-        <div className="media-content">
-          <div className="content">
-        
-              <strong>{props.food.name}</strong>
-               <br />
-              <small>{props.food.cal} cal</small>
-        
-          </div>
+      <div className="media-content">
+        <div className="content">
+          <strong>{props.food.name}</strong>
+          <br />
+          <small>{props.food.cal} cal</small>
         </div>
-        <div className="merightdia-">
+      </div>
+      <div className="media-right">
           <div className="field has-addons">
             <div className="control">
-              <input 
-              className="input" 
-              type="number"
-               value={quantity} 
-               onChange={handleQuantityChange}
-               min='0' 
-               />
-            
-            <button className="button is-info" onClick={handleAddClick}> +</button>
-             
-            <p>{quantity} {props.food.name} = {totalCalories} cal</p>
-
-              <button className="reset" onClick={handleResetClick}>Reset</button>
+              <div className="input-with-button">
+                <input 
+                  className="input" 
+                  type="number"
+                  value={quantity} 
+                  onChange={handleQuantityChange} 
+                />
+                <button className="button is-info" onClick={handleAddClick}>
+                  <span>+</span>
+                  </button>
+                  <p className="added-calories">
+                    {quantity}*{props.food.cal} {props.food.name} = {totalCalories} cal
+                   
+                  </p>
+                  <button className="reset" onClick={handleResetClick}>Reset</button>
+                
+              </div>
             </div>
           </div>
-        </div>
-      </article>
+      </div>
     </div>
   );
 }

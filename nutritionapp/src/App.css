@@ -1,82 +1,73 @@
-.app-container {
+.box {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  padding: 20px;
-  width: 300%;
-  background-color: #2ba5c7;
-}
-
-.search-container {
-  width: 100%;
   margin-bottom: 20px;
-}
-
-.food-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.food-box {
-  width: 100%;
-  margin-bottom: 20px;
+  width: 200%;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: #5396d4;
   padding: 10px;
 }
 
-
-
 .media-left {
-  margin-bottom: 10px;
+  width: 30%;
+  margin-right: 10px;
 }
 
 .media-content {
   flex: 1;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.media-right {
+  width: 30%;
+  margin-left: 10px;
 }
 
-.field {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.input {
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.button {
-  width: 100%;
-  margin-bottom: 10px;
-}
-.box {
+.input-with-button {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.media-left {
-  width: 30%; 
-  margin-right: 10px; 
+.input {
+  width: 30%;
+  height: 30px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.media-content {
-  flex: 1; 
+.added-calories {
+  width: 30%;
+  margin: 0 10px;
+  font-size: 14px;
+}
+.button.is-info {
+  width: 10%;
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 14px;
+  justify-content: center;
+  background-color: #2ba5c7;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+
 }
 
-.media-right {
-  width: 30%; 
-  margin-left: 10px; 
+.reset {
+  margin-left: 10px;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
